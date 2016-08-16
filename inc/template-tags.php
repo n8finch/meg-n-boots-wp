@@ -119,3 +119,17 @@ function meg_n_boots_category_transient_flusher() {
 }
 add_action( 'edit_category', 'meg_n_boots_category_transient_flusher' );
 add_action( 'save_post',     'meg_n_boots_category_transient_flusher' );
+
+
+/**
+ * Displays the optional custom logo.
+ *
+ * Does nothing if the custom logo is not available.
+ *
+ * @since Twenty Sixteen 1.2
+ */
+function meg_n_boots_the_custom_logo() {
+	if ( function_exists( 'the_custom_logo' ) ) {
+		the_custom_logo();
+	}
+}

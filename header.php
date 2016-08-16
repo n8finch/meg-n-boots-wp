@@ -30,7 +30,13 @@
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
-				<row>
+				<div class="row">
+					<?php if( !empty(get_custom_logo()) ) { ?>
+					<div class="site-branding-logo text-right col-xs-1">
+						<?php meg_n_boots_the_custom_logo(); ?>
+					</div>
+					<?php } ?>
+
 				<div class="site-branding text-left col-xs-6">
 					<?php if ( isset (get_theme_mod( 'header_image_data' )->url )) : ?>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -52,7 +58,7 @@
 					endif; ?>
 				</div><!-- .site-branding -->
 
-				<div id="navbar-button-group" class="text-right col-xs-6">
+				<div id="navbar-button-group" class="text-right col-xs-5">
 					<button type="button" class="navbar-button"  data-toggle="modal" data-target="#modal-search">
 						<span class="sr-only">Toggle navigation</span>
 						<span id="" class="glyphicon glyphicon-search"></span>
@@ -73,7 +79,7 @@
 						<span class="glyphicon glyphicon-option-horizontal"></span>
 					</button>
 				</div>
-				</row>
+				</div> <!-- end div row nav -->
 			</div><!--end container-->
 		</nav>
 	</header><!-- #masthead -->

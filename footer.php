@@ -18,8 +18,8 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<?php echo __('Proudly powered by') ?> <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'meg-n-boots' ) ); ?>"><?php printf( esc_html__( '%s', 'meg-n-boots' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>Meg-n-Boots <?php echo __('theme developed by') ?>
+			<?php echo __('Proudly powered by', 'meg-n-boots') ?> <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'meg-n-boots' ) ); ?>"><?php printf( esc_html__( '%s', 'meg-n-boots' ), 'WordPress' ); ?></a>
+			<span class="sep"> | </span>Meg-n-Boots <?php echo __('theme developed by', 'meg-n-boots') ?>
 			<a href="<?php echo esc_url( __( '//n8finch.com/', 'meg-n-boots' ) ); ?>"><?php printf( esc_html__( '%s', 'meg-n-boots' ), 'Nate Finch' ); ?></a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
