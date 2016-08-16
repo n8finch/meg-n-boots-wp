@@ -4,7 +4,7 @@ Theme URI: https://finchproservices.com/
 Author: Nate Finch
 Author URI: https//www.n8finch.com
 Description: A bootstrap theme with javascript, masonry, backstretch hero images and more. Use the Customizer to change colors, images, titles, etc. Any custom CSS styles, you can add to the file in css/custom.css, as it loads after the other style sheets.
-Version: 1.0.6
+Version: 1.0.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: meg-n-boots
@@ -678,6 +678,10 @@ a:active {
     float: right;
     text-align: right;
     width: 50%;
+}
+
+.post-navigation {
+    margin-top: 20px;
 }
 
 /*--------------------------------------------------------------
