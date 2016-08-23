@@ -88,9 +88,18 @@ if ( ! function_exists( 'meg_n_boots_setup' ) ) :
 
 
 		// Set up the WordPress core custom header feature.
-		add_theme_support( 'custom-header' );
+		add_theme_support( 'custom-header', array(
+			'default-image'          => get_template_directory_uri() . '/img/boots-mtn.jpg',
+			'default-text-color'     => '000000',
+			'width'                  => 1400,
+			'height'                 => 600,
+			'flex-height'            => true,
+			'uploads'                => true
+		) );
+
 	}
 endif;
+
 add_action( 'after_setup_theme', 'meg_n_boots_setup' );
 
 /**
@@ -135,16 +144,6 @@ function meg_n_boots_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
-
-	register_sidebar( array(
-		'name'          => esc_html__( 'Home Hero', 'meg-n-boots' ),
-		'id'            => 'sidebar-home-hero',
-		'description'   => 'Add a text widget here for the home hero image. Use the Widget Title for H2 font sizes.',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
 }
 
 add_action( 'widgets_init', 'meg_n_boots_widgets_init' );
@@ -176,7 +175,7 @@ function meg_n_boots_scripts() {
 
 	wp_enqueue_script( 'backstretch', get_template_directory_uri() . '/js/backstretch.js', array(), '2.0.4', true );
 
-	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '3.3.4', true );
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.js', array( 'jquery' ), '3.3.4', true );
 
 	wp_enqueue_script( 'masonry-js', get_template_directory_uri() . '/js/masonry.js', array(), '4.0.0', true );
 
@@ -192,7 +191,7 @@ add_action( 'wp_enqueue_scripts', 'meg_n_boots_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

@@ -16,7 +16,6 @@ get_header();
 
 ?>
 
-
 	<section id="hero-section" data-type="background" data-speed="5">
 		<article>
 			<div class="container clearfix text-center">

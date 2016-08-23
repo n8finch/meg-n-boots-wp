@@ -21,17 +21,17 @@
  * @uses meg_n_boots_header_style()
  */
 function meg_n_boots_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'meg_n_boots_custom_header_args', array(
-		'default-image'          => ' ',
+	add_theme_support( 'custom-header', array(
+		'default-image'          => get_template_directory_uri() . '/img/boots-mtn.jpg',
 		'default-text-color'     => '000000',
-		'width'                  => 190,
-		'height'                 => 60,
+		'width'                  => 1100,
+		'height'                 => 600,
 		'flex-height'            => true,
 		'uploads'                => true,
 		'wp-head-callback'       => 'meg_n_boots_header_style',
-	) ) );
+	) );
 }
-add_action( 'after_setup_theme', 'meg_n_boots_custom_header_setup' );
+//add_action( 'after_setup_theme', 'meg_n_boots_custom_header_setup' );
 
 if ( ! function_exists( 'meg_n_boots_header_style' ) ) :
 /**

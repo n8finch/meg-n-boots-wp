@@ -38,17 +38,13 @@
 					<?php } ?>
 
 				<div class="site-branding text-left col-xs-6">
-					<?php if ( isset (get_theme_mod( 'header_image_data' )->url )) : ?>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<img id="header-logo" src="<?php echo esc_url(get_theme_mod( 'header_image_data' )->url); ?>" alt="<?php echo get_bloginfo('name'); ?>">
-						</a>
-					<?php else : ?>
-						<h1 class="site-title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<?php bloginfo( 'name' ); ?>
-						</a>
-						</h1>
-					<?php endif; ?>
+
+					<h1 class="site-title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<?php bloginfo( 'name' ); ?>
+					</a>
+					</h1>
+
 
 					<?php
 					$description = get_bloginfo( 'description', 'display' );
@@ -58,7 +54,12 @@
 					endif; ?>
 				</div><!-- .site-branding -->
 
+				<?php if( !empty(get_custom_logo()) ) { ?>
 				<div id="navbar-button-group" class="text-right col-xs-5">
+				<?php } else { ?>
+				<div id="navbar-button-group" class="text-right col-xs-6">
+				<?php } ?>
+
 					<button type="button" class="navbar-button"  data-toggle="modal" data-target="#modal-search">
 						<span class="sr-only">Toggle navigation</span>
 						<span id="" class="glyphicon glyphicon-search"></span>

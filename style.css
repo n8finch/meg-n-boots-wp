@@ -1,10 +1,10 @@
 /*
-Theme Name: Meg-n-Boots
+Theme Name: Meg-n-Boots 1.0.8
 Theme URI: https://finchproservices.com/
 Author: Nate Finch
 Author URI: https//www.n8finch.com
 Description: A bootstrap theme with javascript, masonry, backstretch hero images and more. Use the Customizer to change colors, images, titles, etc. Any custom CSS styles, you can add to the file in css/custom.css, as it loads after the other style sheets.
-Version: 1.0.7
+Version: 1.0.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: meg-n-boots
@@ -1012,7 +1012,7 @@ h1.site-title > a {
 
 .grid-item-content {
     background: white;
-    border: 1px solid #aaa;
+    border: 1px solid #ddd;
     border-radius: 5px;
 }
 
